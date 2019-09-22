@@ -1,0 +1,16 @@
+{
+    "data": [
+    {% for user in data %}
+        {
+            "id": {{ user.id }},
+            "first_name": "{{ user.first_name }}",
+            "last_name": "{{ user.last_name }}",
+            "full_name": "{{ [user.first_name, user.last_name]|join(' ') }}",
+            "email": "{{ user.email }}",
+            "gender": "{{ user.gender }}",
+            "gender_icon": "icon-{{ user.gender|slice(0, 1)|lower }}",
+            "ip_address": "{{ user.ip_address }}"
+        }{% if not loop.last %},{% endif %}
+    {% endfor %}
+    ]
+}

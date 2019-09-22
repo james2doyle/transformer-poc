@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "first_name": "Malanie",
+        "last_name": "Howels",
+        "email": "mhowels0@dagondesign.com",
+        "gender": "Female",
+        "ip_address": "4.213.34.100"
+    },
+    {
+        "id": 2,
+        "first_name": "Ferd",
+        "last_name": "Berrick",
+        "email": "fberrick1@pcworld.com",
+        "gender": "Male",
+        "ip_address": "43.37.127.35"
+    },
+    {
+        "id": 3,
+        "first_name": "Otto",
+        "last_name": "Chilcotte",
+        "email": "ochilcotte2@foxnews.com",
+        "gender": "Male",
+        "ip_address": "194.93.233.199"
+    },
+    {
+        "id": 4,
+        "first_name": "Lind",
+        "last_name": "Obin",
+        "email": "lobin3@usda.gov",
+        "gender": "Male",
+        "ip_address": "230.78.208.127"
+    }
+]

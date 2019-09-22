@@ -1,0 +1,30 @@
+<div class="users">
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Full Name</th>
+                <th>Email</th>
+                <th>Gender</th>
+                <th>Gender Icon</th>
+                <th>Ip Address</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in data %}
+            <tr>
+                <td>{{ user.id }}</td>
+                <td>{{ user.first_name }}</td>
+                <td>{{ user.last_name }}</td>
+                <td>{{ [user.first_name, user.last_name]|join(' ') }}</td>
+                <td>{{ user.email }}</td>
+                <td>{{ user.gender }}</td>
+                <td>icon-{{ user.gender|slice(0, 1)|lower }}</td>
+                <td>{{ user.ip_address }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

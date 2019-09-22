@@ -1,0 +1,14 @@
+{
+    "autoload": {
+        "files": [
+          "app/render.php",
+          "app/callback.php"
+        ]
+    },
+    "require-dev": {
+        "swoole/ide-helper": "@dev"
+    },
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}

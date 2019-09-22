@@ -1,0 +1,4 @@
+id,first_name,last_name,full_name,email,gender,gender_icon,ip_address,
+{% for user in data %}
+{{ user.id }},{{ user.first_name }},{{ user.last_name }},{{ [user.first_name, user.last_name]|join(' ') }},{{ user.email }},{{ user.gender }},"icon-{{ user.gender|slice(0, 1)|lower }}",{{ user.ip_address }}{% if not loop.last %},{{ "\n" }}{% endif %}
+{% endfor %}
