@@ -1,14 +1,38 @@
 {
+    "name": "james2doyle/transformer",
+    "description": "",
+    "keywords": [],
+    "authors": [
+        {
+            "name": "James Doyle",
+            "email": "james2doyle@gmail.com",
+            "role": "Developer"
+        }
+    ],
     "autoload": {
+        "psr-4": {
+          "App\\": "app/"
+        },
         "files": [
           "app/render.php",
           "app/callback.php"
         ]
     },
+    "autoload-dev": {
+        "psr-4": {
+            "App\\Tests\\": "tests"
+        }
+    },
     "require-dev": {
-        "swoole/ide-helper": "@dev"
+        "swoole/ide-helper": "@dev",
+        "phpunit/phpunit": "^6.0"
     },
     "require": {
+        "php": "^7.1",
         "twig/twig": "^2.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
     }
 }
