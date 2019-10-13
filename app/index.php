@@ -10,6 +10,11 @@ $host = getenv('HOST');
 $hostname = getenv('HOSTNAME');
 $port = getenv('PORT');
 
+// be local if there is no ENV
+if (getenv('ENV') === false) {
+    putenv('ENV=local');
+}
+
 $server = new Server($host, $port);
 
 // a swoole server is evented just like express
