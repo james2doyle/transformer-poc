@@ -9,10 +9,12 @@ With this little app, you can take one set of `POST` data and _transform_ the da
 - [x] Sandboxed templates
 - [x] Template path
 - [x] Multiple content types
+- [x] `.env` support
 - [ ] Remote templates
 
 ### Installation
 
+* `cp .env.example .env`
 * `composer install`
 * `docker-compose up`
 

@@ -5,15 +5,16 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use Swoole\Http\Server;
 use Swoole\Http\Request;
 use Swoole\Http\Response;
+use App\Callback;
+use App\Render;
+use Dotenv\Dotenv;
+
+$dotenv = Dotenv::create(__DIR__);
+$dotenv->load();
 
 $host = getenv('HOST');
 $hostname = getenv('HOSTNAME');
 $port = getenv('PORT');
-
-// be local if there is no ENV
-if (getenv('ENV') === false) {
-    putenv('ENV=local');
-}
 
 $server = new Server($host, $port);
 

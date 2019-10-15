@@ -20,6 +20,9 @@
         </whitelist>
     </filter>
     <php>
-        <env name="ENV" value="testing"/>
+        <env name="APP_ENV" value="testing"/>
+        <env name="HOST" value="0.0.0.0" />
+        <env name="HOSTNAME" value="docker.local" />
+        <env name="PORT" value="8080" />
     </php>
 </phpunit>

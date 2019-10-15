@@ -29,7 +29,8 @@
     },
     "require": {
         "php": "^7.1",
-        "twig/twig": "^2.0"
+        "twig/twig": "^2.0",
+        "vlucas/phpdotenv": "^3.6"
     },
     "scripts": {
         "test": "vendor/bin/phpunit",

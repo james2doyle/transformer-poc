@@ -154,7 +154,7 @@ class Render
      */
     public function __construct(?string $path = null)
     {
-        $env = getenv('ENV') ? 'local' : getenv('ENV');
+        $env = getenv('APP_ENV') ? 'local' : getenv('APP_ENV');
 
         $path = $path ?? __DIR__ . '/../templates';
         $loader = new FilesystemLoader($path);
