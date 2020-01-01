@@ -1,6 +1,6 @@
 {
     "data": [
-    {% for user in data %}
+    {%- for user in data -%}
         {
             "id": {{ user.id }},
             "first_name": "{{ user.first_name }}",
@@ -10,7 +10,7 @@
             "gender": "{{ user.gender }}",
             "gender_icon": "icon-{{ user.gender|slice(0, 1)|lower }}",
             "ip_address": "{{ user.ip_address }}"
-        }{% if not loop.last %},{% endif %}
-    {% endfor %}
+        }{%- if not loop.last -%},{%- endif -%}
+    {%- endfor -%}
     ]
 }

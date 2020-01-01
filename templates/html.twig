@@ -13,7 +13,7 @@
             </tr>
         </thead>
         <tbody>
-            {% for user in data %}
+            {%- for user in data -%}
             <tr>
                 <td>{{ user.id }}</td>
                 <td>{{ user.first_name }}</td>
@@ -24,7 +24,7 @@
                 <td>icon-{{ user.gender|slice(0, 1)|lower }}</td>
                 <td>{{ user.ip_address }}</td>
             </tr>
-            {% endfor %}
+            {%- endfor -%}
         </tbody>
     </table>
 </div>
