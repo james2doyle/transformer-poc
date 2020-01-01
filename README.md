@@ -33,6 +33,18 @@ http://docker.local:8080?template=html&content-type=text/html
 http://docker.local:8080?template=csv&content-type=text/csv
 ```
 
+### URL Callback
+
+If a `callback` parameter is passed, the server will send the results of the request to that endpoint using the content type being passed through. This means the client making the initial request will get the response, _as well as_, the callback server.
+
+You will notice that the server still responds quickly even though the server is making a request to another server. This is because Swoole has the ability to make the request _after_ the response (using deferred functionality) is sent back to our initializing client. This means there is no error handling for requests to the additional server since errors cannot be handled after the response.
+
+```
+http://docker.local:8080?template=csv&content-type=text/csv&callback=http://example.com/endpoint
+```
+
+This will transform the data and then also make a POST request to `http://example.com/endpoint` with a copy of the response.
+
 ### Usage
 
 You can use the included test data to try out the endpoints. You can use curl in the following way:
